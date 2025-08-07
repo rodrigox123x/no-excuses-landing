@@ -1,0 +1,545 @@
+.section {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.05"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.05"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.05"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.05"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  background: linear-gradient(45deg, #ffffff, #e0e0e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  opacity: 0.95;
+  margin: 0;
+  color: #a0a0a0;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.featureIcon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.featureContent h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: white;
+}
+
+.featureContent p {
+  margin: 0;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+.mockupContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.lockScreenMockup {
+  width: 320px;
+  height: 600px;
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  border-radius: 38px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.6), 0 1.5px 8px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  border: 2.5px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.lockScreenTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.lockTime {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.lockDate {
+  font-size: 1.1rem;
+  color: #a0a0a0;
+  margin-top: 0.2rem;
+  letter-spacing: 0.5px;
+}
+
+.notificationsStack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin: 0 1.2rem;
+}
+
+.pushNotification {
+  background: rgba(255,255,255,0.1);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  padding: 1rem 1.2rem 0.8rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  border-left: 5px solid #ffffff;
+  animation: fadeInUp 0.7s;
+  backdrop-filter: blur(20px);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pushHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1rem;
+  margin-bottom: 0.1rem;
+}
+
+.pushIcon {
+  font-size: 1.3rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.1rem 0.4rem;
+}
+
+.pushApp {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.pushTime {
+  margin-left: auto;
+  color: #a0a0a0;
+  font-size: 0.95rem;
+}
+
+.pushBody {
+  color: #ffffff;
+  font-size: 1.08rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.lockScreenBottom {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.unlockHint {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .lockScreenMockup {
+    width: 280px;
+    height: 520px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 4rem 0;
+  }
+  
+  .lockScreenMockup {
+    width: 240px;
+    height: 480px;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+}
+
+/* Modo claro (opcional) */
+[data-theme="light"] .section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+[data-theme="light"] .section::before {
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+}
+
+[data-theme="light"] .title {
+  background: linear-gradient(45deg, #fff, #f0f0f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="light"] .subtitle {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+[data-theme="light"] .feature {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="light"] .feature:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="light"] .lockScreenMockup {
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.25), 0 1.5px 8px rgba(67,56,202,0.08);
+  border: 2.5px solid #fff;
+}
+
+[data-theme="light"] .lockDate {
+  color: #e0e7ef;
+}
+
+[data-theme="light"] .pushNotification {
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  border-left: 5px solid #764ba2;
+}
+
+[data-theme="light"] .pushIcon {
+  background: #f3f4f6;
+}
+
+[data-theme="light"] .pushApp {
+  color: #764ba2;
+}
+
+[data-theme="light"] .pushTime {
+  color: #888;
+}
+
+[data-theme="light"] .pushBody {
+  color: #232526;
+}
+
+[data-theme="light"] .unlockHint {
+  color: #e0e7ef;
+}
+
+.phoneMockup {
+  position: relative;
+  transform: perspective(1000px) rotateY(-15deg) rotateX(5deg);
+  transition: transform 0.3s ease;
+}
+
+.phoneMockup:hover {
+  transform: perspective(1000px) rotateY(-10deg) rotateX(2deg);
+}
+
+.phoneFrame {
+  width: 280px;
+  height: 560px;
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+  border-radius: 30px;
+  padding: 8px;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.phoneFrame::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #333;
+  border-radius: 2px;
+}
+
+.phoneScreen {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 22px;
+  overflow: hidden;
+  position: relative;
+}
+
+.statusBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  background: #000;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.statusIcons {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.notificationContainer {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.notification {
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
+}
+
+.notificationHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.appIcon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.appInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.appName {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.notificationTime {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.notificationContent {
+  margin-bottom: 16px;
+}
+
+.message {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #333;
+  margin: 0;
+  font-style: italic;
+}
+
+.notificationActions {
+  display: flex;
+  gap: 8px;
+}
+
+.actionBtn, .dismissBtn {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.actionBtn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+.actionBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.dismissBtn {
+  background: #f8f9fa;
+  color: #666;
+  border: 1px solid #e9ecef;
+}
+
+.dismissBtn:hover {
+  background: #e9ecef;
+}
+
+.notificationHistory {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.historyItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+}
+
+.historyIcon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.historyText {
+  font-size: 0.8rem;
+  color: #555;
+  line-height: 1.3;
+  font-style: italic;
+}
+
+.messagePreview {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.messagePreview h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+  color: white;
+}
+
+.messageList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.messageItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.messageItem:hover {
+  transform: translateX(4px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.messageIcon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.messageText {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: white;
+  opacity: 0.9;
+} 

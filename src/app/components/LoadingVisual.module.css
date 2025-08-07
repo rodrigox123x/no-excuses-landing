@@ -1,0 +1,36 @@
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0 3rem 0;
+  min-height: 60px;
+}
+
+.text {
+  font-size: 1.1rem;
+  color: var(--text-secondary, #444);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.2px;
+}
+
+.dots {
+  font-size: 2rem;
+  letter-spacing: 0.2em;
+  color: #0af;
+  display: inline-block;
+  animation: loadingDots 1.2s infinite steps(3);
+}
+
+@keyframes loadingDots {
+  0% { opacity: 1; }
+  33% { opacity: 0.5; }
+  66% { opacity: 0.2; }
+  100% { opacity: 1; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .text {
+    --text-secondary: #b0b8c9;
+  }
+} 

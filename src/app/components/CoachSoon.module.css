@@ -1,0 +1,260 @@
+.coachSection {
+  padding: 5rem 0 6rem 0;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.desc {
+  font-size: 1.2rem;
+  color: #a0a0a0;
+  margin-bottom: 2.5rem;
+}
+
+.mockupContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.chatMockup {
+  background: #1a1a1a;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 1.5px 8px rgba(0, 0, 0, 0.3);
+  width: 370px;
+  padding: 0 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+}
+
+.chatHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.2rem 1.5rem 0.7rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(90deg, #ffffff 0%, #e0e0e0 100%);
+  border-radius: 24px 24px 0 0;
+}
+
+.coachAvatar {
+  font-size: 2rem;
+  background: #1a1a1a;
+  border-radius: 50%;
+  padding: 0.2rem 0.4rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.coachName {
+  font-weight: 600;
+  color: #000000;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.chatBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1.5rem 1.2rem 1rem 1.2rem;
+  min-height: 260px;
+  background: #0f0f0f;
+}
+
+.messageUser {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.7rem;
+  justify-content: flex-end;
+}
+
+.userAvatar {
+  font-size: 1.3rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  padding: 0.2rem 0.4rem;
+}
+
+.userBubble {
+  background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+  color: #000000;
+  padding: 0.7rem 1.1rem;
+  border-radius: 18px 18px 4px 18px;
+  font-size: 1rem;
+  max-width: 70%;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.messageCoach {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.7rem;
+  justify-content: flex-start;
+}
+
+.coachAvatarSmall {
+  font-size: 1.2rem;
+  background: #1a1a1a;
+  border-radius: 50%;
+  padding: 0.15rem 0.35rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.coachBubble {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  padding: 0.7rem 1.1rem;
+  border-radius: 18px 18px 18px 4px;
+  font-size: 1rem;
+  max-width: 75%;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.coachBubble ul {
+  margin: 0.5rem 0 0.2rem 1.2rem;
+  padding: 0;
+  color: #e0e0e0;
+  font-size: 0.98rem;
+}
+
+.coachBubble li {
+  margin-bottom: 0.2rem;
+}
+
+.chatInputMock {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.2rem 0 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0f0f0f;
+  border-radius: 0 0 24px 24px;
+}
+
+.chatInputMock input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1rem;
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+.chatInputMock input::placeholder {
+  color: #a0a0a0;
+}
+
+.chatInputMock button {
+  padding: 0.6rem 1.1rem;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #a0a0a0;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+  .chatMockup {
+    width: 98vw;
+    min-width: 0;
+    max-width: 99vw;
+  }
+}
+
+/* Modo claro (opcional) */
+[data-theme="light"] .coachSection {
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+}
+
+[data-theme="light"] .title {
+  color: #4338ca;
+}
+
+[data-theme="light"] .desc {
+  color: #555;
+}
+
+[data-theme="light"] .chatMockup {
+  background: white;
+  box-shadow: 0 8px 32px rgba(67, 56, 202, 0.10), 0 1.5px 8px rgba(67,56,202,0.08);
+  border: 1.5px solid #e0e7ff;
+}
+
+[data-theme="light"] .chatHeader {
+  background: linear-gradient(90deg, #6366f1 0%, #818cf8 100%);
+  border-bottom: 1px solid #e0e7ff;
+}
+
+[data-theme="light"] .coachAvatar {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(67,56,202,0.10);
+}
+
+[data-theme="light"] .coachName {
+  color: #fff;
+}
+
+[data-theme="light"] .chatBody {
+  background: #f3f4f6;
+}
+
+[data-theme="light"] .userAvatar {
+  background: #e0e7ff;
+}
+
+[data-theme="light"] .userBubble {
+  background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(67,56,202,0.08);
+}
+
+[data-theme="light"] .coachAvatarSmall {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(67,56,202,0.10);
+}
+
+[data-theme="light"] .coachBubble {
+  background: #fff;
+  color: #4338ca;
+  box-shadow: 0 2px 8px rgba(67,56,202,0.08);
+  border: none;
+}
+
+[data-theme="light"] .coachBubble ul {
+  color: #6366f1;
+}
+
+[data-theme="light"] .chatInputMock {
+  background: #f3f4f6;
+  border-top: 1px solid #e0e7ff;
+}
+
+[data-theme="light"] .chatInputMock input {
+  background: #fff;
+  color: #555;
+  border: 1px solid #e0e7ff;
+}
+
+[data-theme="light"] .chatInputMock input::placeholder {
+  color: #555;
+}
+
+[data-theme="light"] .chatInputMock button {
+  background: #a5b4fc;
+  color: #fff;
+} 
